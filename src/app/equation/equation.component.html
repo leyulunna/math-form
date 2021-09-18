@@ -1,0 +1,10 @@
+<form [formGroup]="mathForm">
+  {{ a }} + {{ b }} =
+  <input appAnswerHighLight formControlName="answer" />
+</form>
+
+{{ this.secondPerSolution | number: '1.1-3' }}
+<hr />
+<div>is valid: {{ mathForm.valid }}</div>
+<div>values: {{ mathForm.value | json }}</div>
+<div>errors: {{ mathForm.errors | json }}</div>
